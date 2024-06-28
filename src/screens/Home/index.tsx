@@ -48,7 +48,7 @@ export default function Home() {
         )}
         ListEmptyComponent={() => (
           <Text style={styles.listEmptyText}>
-            Ninguém Chegou ao evento ainda ? Adicione participantes a sua lista de presença{' '}
+            Ninguém Chegou ao evento ainda ? Adicione participantes a sua lista de presença
           </Text>
         )}
       />
