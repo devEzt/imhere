@@ -8,6 +8,10 @@ export default function Home() {
     console.log('voce clicou no botao de adicionar!')
   }
 
+  const handleParticipantRemove = (name: string) => {
+    console.log(`voce removeu um partiicpante : ${name}`)
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do Evento</Text>
@@ -21,10 +25,10 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant username="Rodrigo" />
-      <Participant username="Diego" />
-      <Participant username="Vini" />
-      <Participant username="Biro" />
+      <Participant username="Rodrigo" onRemove={() => handleParticipantRemove('Rodrigo')} />
+      <Participant username="Diego" onRemove={() => handleParticipantRemove('Diego')} />
+      <Participant username="Vini" onRemove={() => handleParticipantRemove('Vini')} />
+      <Participant username="Biro" onRemove={() => handleParticipantRemove('Biro')} />
     </View>
   )
 }
