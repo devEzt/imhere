@@ -19,7 +19,10 @@ export default function Home() {
 
   const handleParticipantRemove = (name: string) => {
     Alert.alert('Remover', `Remove ro participante ${name} ?`, [
-      { text: 'Sim', onPress: () => Alert.alert('Deletado!') },
+      {
+        text: 'Sim',
+        onPress: () => setParticipants((prevState) => prevState.filter((participant) => participant !== name)),
+      },
       { text: 'Não', style: 'cancel' },
     ])
     console.log(`voce removeu um partiicpante : ${name}`)
